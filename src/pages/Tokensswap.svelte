@@ -31,7 +31,8 @@
   } from "../components/helpers";
 
   const ZeroEx = '0xdef1c0ded9bec7f1a1670819833240f027b25eff';
-  $: listed = [
+  
+  let listed = [
     {
       address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       symbol: 'ETH',
@@ -320,11 +321,11 @@
     for (let i = 0; i < poolsConfig.available.length; i++) {
       let pie = poolsConfig[poolsConfig.available[i]];
       if(!pie.useMintOverBuy) {
-        listed.push({
+        listed = [...listed, {
           address: poolsConfig.available[i],
           symbol: pie.symbol,
           icon: getTokenImage(poolsConfig.available[i])
-        })
+        }]
       }
     }
   }
