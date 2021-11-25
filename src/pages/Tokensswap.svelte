@@ -83,11 +83,16 @@
     if (token) {
       if(targetModal === 'sell') {
         if(token === buyToken) {
+          buyToken = sellToken
+          sellToken = token
           return;
         }
+
         sellToken = token;
       } else if(targetModal === 'buy') {
         if(token === sellToken) {
+          sellToken = buyToken
+          buyToken = token
           return;
         }
         buyToken = token;
