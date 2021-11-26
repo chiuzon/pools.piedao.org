@@ -61,13 +61,13 @@
   let timeout;
   
 
-  let defaultTokenSell = {
+  const defaultTokenSell = {
     address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     symbol: 'ETH',
     icon: getTokenImage('eth')
   }
 
-  let defaultTokenBuy = {
+  const defaultTokenBuy = {
     address: '0xe4f726adc8e89c6a6017f01eada77865db22da14',
     symbol: 'BCP',
     icon: getTokenImage('0xe4f726adc8e89c6a6017f01eada77865db22da14')

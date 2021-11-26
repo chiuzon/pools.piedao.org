@@ -217,6 +217,7 @@ window.addEventListener('hashchange', () => {
     });
   }
   currentRoute.set({ ...formatRoute(newRoute) });
+  
   window.scrollTo({
     top: 0,
     left: 0,
